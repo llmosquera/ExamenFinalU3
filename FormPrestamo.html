@@ -1,0 +1,53 @@
+{% extends './base.html' %}
+{% block title %}Registro Prestamo{% endblock %}
+
+{% block body %}
+
+<form class="form-signin" action="/registroPrestamos" method="POST">
+    <di class="row">
+        <div class="col-md-6 border p-4 rounded mx-auto ">
+            <div class="mb-3">
+                <label  class="form-label">Numero Cedula</label>
+                <input type="text" class="form-control" name="id">
+              </div>
+              <div class="mb-3">
+                <label  class="form-label">Nombres</label>
+                <input type="text" class="form-control" name="nombres" >
+              </div>
+              <div class="border border border-secondary border-2 p-2 mb-3 rounded">
+                <h6>Prestamo</h6>
+                <hr>
+                  <div class="mb-3 ">
+                    <label  class="form-label">Monto</label>
+                    <input type="text" class="form-control"  name="monto">
+                  </div>
+                  <div class="mb-3 ">
+                    <label  class="form-label">Tiempo Credito</label>
+                    <input type="text" class="form-control"  name="fecha_pago" >
+                  </div>
+                  <div class="mb-3 ">
+                    <label  class="form-label">Fecha de pagos</label>
+                    <input type="text" class="form-control"  name="fecha_pago" >
+                  </div>
+                  <div class="">
+                    <label  class="form-label">Bancos</label>
+                    <select class="form-select" aria-label="Default select example" name="banco">
+                        <option selected>Selecione el Banco</option>
+                        <option value="1">Banco Ecuador</option>
+                        <option value="2">Banco Sociedad</option>
+                        <option value="3">Banco Peru</option>
+                        <option value="3">Banco Lima</option>
+                        <option value="3">Banco Bolivia</option>
+                        <option value="3"> Banco La Paz</option>
+                        <option value="3"> Banco Caracas</option>
+                        <option value="3"> Banco Madrid</option>
+                      </select>
+                  </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary">Enviar</button>
+        </div>
+    </di>
+    
+</form>
+{% endblock %}
